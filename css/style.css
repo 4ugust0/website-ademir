@@ -338,6 +338,8 @@ h1, h2, h3, h4, h5, h6 { font-weight: 700; color: var(--navy); }
   width: 44px; height: 44px; border-radius: 12px; display: grid; place-items: center; flex-shrink: 0;
   background: rgba(201, 162, 74, .15); color: var(--gold-light); font-size: 1.15rem;
 }
+.contact-list a { color: #fff; text-decoration: none; }
+.contact-list a:hover { color: var(--gold-light); }
 .socials { display: flex; gap: .7rem; }
 .socials a {
   width: 44px; height: 44px; border-radius: 50%; display: grid; place-items: center;

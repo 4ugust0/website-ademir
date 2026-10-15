@@ -39,7 +39,8 @@ const observer = new IntersectionObserver(entries => {
 
 document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 
-// Formulário de contato (validação Bootstrap + abre o e-mail)
+// Formulário de contato (validação Bootstrap + abre o WhatsApp em nova aba)
+const WHATSAPP = '5561992885503';
 const form = document.getElementById('contactForm');
 form.addEventListener('submit', e => {
   e.preventDefault();
@@ -47,12 +48,12 @@ form.addEventListener('submit', e => {
     form.classList.add('was-validated');
     return;
   }
-  const nome = form.nome.value;
-  const assunto = encodeURIComponent(`Contato pelo site - ${nome}`);
-  const corpo = encodeURIComponent(
-    `Nome: ${nome}\nE-mail: ${form.email.value}\nPerfil: ${form.perfil.value}\n\n${form.mensagem.value}`
+  const texto = encodeURIComponent(
+    `Olá, Ademir! Vim pelo site.\n\n` +
+    `*Nome:* ${form.nome.value}\n*E-mail:* ${form.email.value}\n*Perfil:* ${form.perfil.value}\n\n` +
+    `*Mensagem:* ${form.mensagem.value}`
   );
-  window.location.href = `mailto:contato@ademireducacao.com.br?subject=${assunto}&body=${corpo}`;
+  window.open(`https://wa.me/${WHATSAPP}?text=${texto}`, '_blank', 'noopener');
 
   bootstrap.Toast.getOrCreateInstance(document.getElementById('sentToast')).show();
   form.reset();

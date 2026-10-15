@@ -17,8 +17,8 @@ img/             Coloque aqui a foto: img/ademir.jpg
 ## Personalização
 
 - **Foto:** salve a foto do Ademir como `img/ademir.jpg`; ela aparece automaticamente na seção "Sobre".
-- **WhatsApp:** troque `5500000000000` pelo número real nos links `wa.me` do `index.html`.
-- **E-mail:** troque `contato@ademireducacao.com.br` no `index.html` e no `js/main.js`.
+- **WhatsApp:** (61) 99288-5503 — o formulário de contato abre o WhatsApp com a mensagem pronta. Para trocar, altere os links `wa.me` do `index.html` e a constante `WHATSAPP` em `js/main.js`.
+- **E-mail:** aralves2639@gmail.com (seção de contato do `index.html`).
 - **Redes sociais:** atualize os links `href="#"` da seção de contato.
 
 ## Como visualizar
